@@ -1,0 +1,34 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="pt-card.html">
+
+<dom-module id="pt-element">
+  <style>
+    :host {
+      display: block;
+    }
+    pt-card {
+      margin-bottom: 50px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 2px;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.0980392) 0px 3px 6px, rgba(0, 0, 0, 0.0980392) 0px 0px 5px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.0980392) 0px 3px 6px, rgba(0, 0, 0, 0.0980392) 0px 0px 5px;
+      box-shadow: rgba(0, 0, 0, 0.0980392) 0px 3px 6px, rgba(0, 0, 0, 0.0980392) 0px 0px 5px;
+    }
+  </style>
+  <template>
+    <div layout vertical center>
+      <pt-card>
+        <img src="../images/avatar-01.svg" class="badge-circle" layout horizontal center>
+        <h2>Luan</h2>
+        <span>Desenvolvedor Web</span>
+        <p>Teste</p>
+      </pt-card>
+    </div>
+  </template>
+  <script>
+    Polymer({
+      is: "pt-element"
+    })
+  </script>
+</dom-module>

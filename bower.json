@@ -1,0 +1,25 @@
+{
+  "name": "portifolio",
+  "version": "0.0.0",
+  "homepage": "https://github.com/luanpontolio/portifolio",
+  "authors": [
+    "luan_pontolio <luan.pontolio@gmail.com>"
+  ],
+  "description": "Web site.",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "html5",
+    "css3",
+    "js"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.0.0",
+    "normalize.css": "~3.0.3",
+    "paper-header-panel": "PolymerElements/paper-header-panel#1.0.0",
+    "paper-styles": "PolymerElements/paper-styles#1.0.0"
+  }
+}
