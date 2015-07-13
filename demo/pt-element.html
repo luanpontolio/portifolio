@@ -1,28 +1,63 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="stylesheet" href="../bower_components/material-design-lite/material.min.css">
+<link rel="stylesheet" href="../bower_components/material-design-lite/material.min.js">
 <link rel="import" href="pt-card.html">
 
 <dom-module id="pt-element">
   <style>
     :host {
-      display: block;
+      @apply(--layout);
+      @apply(--paper-font-body2);
     }
-    pt-card {
-      margin-bottom: 50px;
+    [tool] {
+      @apply(--layout-inline);
+    }
+    [content] {
+      @apply(--layout);
+      @apply(--layout-horizontal);
+      @apply(--layout-wrap);
+      overflow: auto;
+      padding: 0px;
+    }
+    [card] {
+      @apply(--layout-flex-none);
+      @apply(--layout-center-center);
+      width: 500px;
+      margin: 8px;
+      font-weight: bold;
+      background-color: var(--paper-grey-200);
+    }
+    [card].card-one.demo-card-wide > .mdl-card__title {
+      color: #fff;
       width: 100%;
-      background-color: #fff;
-      border-radius: 2px;
-      -webkit-box-shadow: rgba(0, 0, 0, 0.0980392) 0px 3px 6px, rgba(0, 0, 0, 0.0980392) 0px 0px 5px;
-      -moz-box-shadow: rgba(0, 0, 0, 0.0980392) 0px 3px 6px, rgba(0, 0, 0, 0.0980392) 0px 0px 5px;
-      box-shadow: rgba(0, 0, 0, 0.0980392) 0px 3px 6px, rgba(0, 0, 0, 0.0980392) 0px 0px 5px;
+      height: 176px;
+      background: url('../images/avatar-01.svg') center / cover;
+    }
+    @media (max-width: 800px) {
+      [card] {
+        max-width: calc(100% - 16px);
+      }
     }
   </style>
   <template>
-    <div layout vertical center>
-      <pt-card>
-        <img src="../images/avatar-01.svg" class="badge-circle" layout horizontal center>
-        <h2>Luan</h2>
-        <span>Desenvolvedor Web</span>
-        <p>Teste</p>
+    <div content>
+      <pt-card card class="card-one mdl-card mdl-shadow--2dp demo-card-wide">
+        <div class="mdl-card__title">
+          <h1>Who I'm</h1>
+        </div>
+        <div class="mdl-card__supporting-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Mauris sagittis pellentesque lacus eleifend lacinia...
+        </div>
+      </pt-card>
+      <pt-card card class="card-two mdl-card mdl-shadow--2dp demo-card-wide">
+        <h1>Skills</h1>
+      </pt-card>
+      <pt-card card class="card-three mdl-card mdl-shadow--2dp demo-card-wide">
+        <h1>Works</h1></pt-card>
+      <pt-card card class="card-four mdl-card mdl-shadow--2dp demo-card-wide">
+        <h1>Contact</h1>
       </pt-card>
     </div>
   </template>

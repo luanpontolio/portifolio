@@ -254,10 +254,10 @@ body {
 /* line 89, ../sass/components/_tiles.scss */
 
 .badge-circle {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
-    background-color: #263238;
+    /* background-color: #263238; */
     position: relative;
     top: 2%;
     left: 2%;
