@@ -1,67 +1,27 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
-<link rel="stylesheet" href="../bower_components/material-design-lite/material.min.css">
-<link rel="stylesheet" href="../bower_components/material-design-lite/material.min.js">
-<link rel="import" href="pt-card.html">
+<link rel="import" href="pt-animate.html">
 
 <dom-module id="pt-element">
   <style>
     :host {
-      @apply(--layout);
-      @apply(--paper-font-body2);
-    }
-    [tool] {
-      @apply(--layout-inline);
+      display: block;
     }
     [content] {
       @apply(--layout);
-      @apply(--layout-horizontal);
-      @apply(--layout-wrap);
-      overflow: auto;
-      padding: 0px;
-    }
-    [card] {
-      @apply(--layout-flex-none);
-      @apply(--layout-center-center);
-      width: 500px;
-      margin: 8px;
-      font-weight: bold;
-      background-color: var(--paper-grey-200);
-    }
-    [card].card-one.demo-card-wide > .mdl-card__title {
-      color: #fff;
-      width: 100%;
-      height: 176px;
-      background: url('../images/avatar-01.svg') center / cover;
-    }
-
-    @media (min-width: 481px) {
-      [card] {
-        width: calc(100% - 20px);
-      }
+      position: relative;
+      padding: 10px;
+      overflow: hidden;
+      z-index: 9999;
+      -webkit-backface-visibility: hidden;
     }
   </style>
   <template>
+
     <div content>
-      <pt-card card class="card-one mdl-card mdl-shadow--2dp demo-card-wide">
-        <div class="mdl-card__title">
-          <h1>Who I'm</h1>
-        </div>
-        <div class="mdl-card__supporting-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Mauris sagittis pellentesque lacus eleifend lacinia...
-        </div>
-      </pt-card>
-      <pt-card card class="card-two mdl-card mdl-shadow--2dp demo-card-wide">
-        <h1>Skills</h1>
-      </pt-card>
-      <pt-card card class="card-three mdl-card mdl-shadow--2dp demo-card-wide">
-        <h1>Works</h1></pt-card>
-      <pt-card card class="card-four mdl-card mdl-shadow--2dp demo-card-wide">
-        <h1>Contact</h1>
-      </pt-card>
+      <pt-animate ></pt-animate>
     </div>
+
   </template>
+
   <script>
     Polymer({
       is: "pt-element"
