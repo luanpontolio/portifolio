@@ -20,7 +20,7 @@ $(".card-toggle").on("click", function(){
 			that.parent().toggleClass("active").find(".card-content").on("transitionend", function(){
 				isAnimating = false;
 			});	;
-			
+
 		},10);
 	} else {
 		return;
