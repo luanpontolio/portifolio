@@ -19,9 +19,8 @@
   <link rel="import" href="bower_components/neon-animation/neon-animated-pages.html" >
   <link rel="import" href="bower_components/neon-animation/neon-animations.html">
   <link rel="import" href="bower_components/paper-card/paper-card.html">
-  <link rel="import" href="bower_components/paper-input/paper-input.html">
   <link rel="import" href="bower_components/paper-button/paper-button.html">
-  <link rel="import" href="bower_components/iron-form/iron-form.html">
+
   <link rel="import" href="demo/x-element.html">
   <link rel="import" href="demo/x-elements-list.html">
 
@@ -40,24 +39,34 @@
       @apply(--layout-vertical);
       @apply(--center-justified);
       max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
     }
     paper-card {
+      display: inline-block;
+      position: relative;
       width: 100%;
-      margin-bottom: 16px;
+      box-sizing: border-box;
+      background: #fff;
+      border-radius: 2px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                  0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    }
+    .paper-card-0 .header.paper-card .title-text.paper-card {
+      color: #fff;
     }
     .fancy .title {
       position: absolute;
       top: 30px;
       left: 100px;
-      color: var(--paper-indigo-500);
     }
     .fancy img {
       width: 100%;
     }
-    .pink {
-      --paper-card-header-color: var(--paper-pink-500);
+    .title-text {
+      color: #fff;
+    }
+     paper-input.short {
+      width: 200px;
     }
    .button {
       text-align: center;
@@ -106,7 +115,7 @@
                   <span>Who I'm</span>
                 </a>
                 <a class="header-nav-link header-nav-link--work" data-offset="[data-nav]" data-scroll-to="" href="#work" on-click="_onWorkClick" title="my works">
-                  <span>My Works</span>
+                  <span>My Experiences</span>
                 </a>
                 <a class="header-nav-link header-nav-link--portifolio" data-offset="[data-nav]" data-scroll-to="" href="#portifolio" on-click="_onPortifolioClick" title="my portifolio">
                   <span>My Skills</span>
@@ -124,14 +133,15 @@
               Back
             </div>
             <div id="cards">
-              <paper-card heading="Who I'm" class="white" image="dist/img/banner2.png" shadown="true">
-                <div class="card-content">
-                  <div class="center">
-                    Bacharel em Sistemas de Informação na Univem, Marília-SP, e atualmente trabalho com desenvolvimento Web, e foco meus estudos na área de Front-end e UX Desing. <br/>
+              <paper-card heading="Who I'm" class="pink"
+                          image="dist/img/banner2.png">
 
-                    <em>Sou apaixonado por tecnologia e gosto de ver como as mesmas se interagem e possibilitam a criação de novos cenários, facilitando as vidas de seus usuários.</em>
+                <div class="card-content">
+                  <div class="left">
+                    Bacharel em Sistemas de Informação na Univem, Marília-SP, e atualmente trabalho com desenvolvimento Web, e foco meus estudos na área de Front-end e UX Desing. Sou apaixonado por tecnologia e gosto de ver como as mesmas se interagem e possibilitam a criação de novos cenários, facilitando as vidas de seus usuários.
                   </div>
                 </div>
+
               </paper-card>
             </div>
           </div>
@@ -142,14 +152,9 @@
             <div class="raised back button" on-click="_onBackClick" title="back">
               BACK
             </div>
-              <h2>Angular</h2>
+              <h2>My Experiences</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                
               </p>
             </div>
           </div>
@@ -178,21 +183,9 @@
             <div class="raised back button" on-click="_onBackClick" title="back">
               BACK
             </div>
+            <div class="vertical center-justified layout">
               <h2>Contact me</h2>
-              <div class="vertical center-justified layout">
-                <form is="iron-form" id="formGet" method="get" action="/" >
-                  <paper-input name="name" label="Name" required></paper-input>
-
-                  <paper-input name="email" label="E-mail" type="email" required></paper-input>
-
-                  <br>
-
-                  <paper-textarea name="message" label="Message" required></paper-textarea>
-                  <br><br>
-                  <paper-button raised class="blue"
-                     onclick="clickHandler(event)">Submit</paper-button>
-                </form>
-              </div>
+              <paper-input label="Name"></paper-input>
             </div>
           </div>
         </x-element>
