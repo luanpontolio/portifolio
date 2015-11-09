@@ -35,7 +35,40 @@
       <neon-animated-pages id="pages" selected="0">
         <x-elements-list id="list">
           <div>
-            <header class="header">
+            <header class="header" data-header>
+              <div class="header-video Video" data-video>
+                <div class="wrapper">
+                  <div class="background-circle">
+                    <div class="triangle-light"></div>
+                    <div class="body"></div>
+                    <div class="triangle-dark"></div>
+                  </div>
+                  <div class="head">
+                    <div class="ear" id="left"></div>
+                    <div class="ear" id="right"></div>
+                    <div class="hair-main">
+                      <div class="sideburn" id="left"></div>
+                      <div class="sideburn" id="right"></div>
+                      <div class="hair-top"></div>
+                    </div>
+                    <div class="face">
+                      <div class="nose"></div>
+                      <div class="eye-shadow" id="left">
+                        <div class="eyebrow"></div>
+                        <div class="eye"></div>
+                      </div>
+                      <div class="eye-shadow" id="right">
+                        <div class="eyebrow"></div>
+                        <div class="eye"></div>
+                      </div>
+                      <div class="mouth"></div>
+                      <div class="shadow-wrapper">
+                        <div class="shadow"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div class="header-intro">
                 <p class="header-tag">
                   Welcome to my site
@@ -67,11 +100,12 @@
         </x-elements-list>
 
         <x-element>
-          <div class="flex layout vertical center-center">
+          <div class="fit layout vertical center-center">
             <div class="raised back button" on-click="_onBackClick" title="back">
               Back
             </div>
-            <div>
+            <div id="cards">
+
               <paper-card heading="Who I'm" class="pink"
                           image="dist/img/banner2.png">
 
