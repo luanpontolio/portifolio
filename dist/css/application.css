@@ -10,10 +10,22 @@ neon-animated-pages #list div>header{
 .large{
   width: 100%;
 }
-#cards {
+.social-section{
+  width: 80%;
+  max-width: 350px;
+  height: 40px;
+  line-height: 45px;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+#cards{
   @apply(--layout-vertical);
-  @apply(--center-justified);
-  max-width: 800px;
+  @apply(--layout-center-center);
+  margin-top: 100px;
+
 }
 paper-card {
   display: inline-block;
@@ -41,9 +53,6 @@ paper-card {
 .title-text {
   color: #fff;
 }
- paper-input.short {
-  width: 200px;
-}
 .button {
   text-align: center;
   width: 100px;
@@ -63,7 +72,7 @@ paper-card {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 .button.back {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 30px;
 }
@@ -74,7 +83,8 @@ paper-card {
   animation: pulse 1s linear infinite;
 }
 
-@keyframes "pulse" {
+/*      Animate HEART    */
+@keyframes pulse {
   0% {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -98,7 +108,7 @@ paper-card {
   }
 }
 
-@-moz-keyframes "pulse" {
+@-moz-keyframes pulse {
   0% {
    -moz-transform: scale(1.1);
    transform: scale(1.1);
@@ -113,7 +123,7 @@ paper-card {
   }
 }
 
-@-webkit-keyframes "pulse" {
+@-webkit-keyframes pulse {
   0% {
    -webkit-transform: scale(1.1);
    transform: scale(1.1);
@@ -128,7 +138,7 @@ paper-card {
   }
 
 }
-@-ms-keyframes "pulse" {
+@-ms-keyframes pulse {
   0% {
    -ms-transform: scale(1.1);
    transform: scale(1.1);
@@ -143,6 +153,7 @@ paper-card {
   }
 
 }
+
 
 .wrapper{
   /* display: table-cell; */
@@ -176,7 +187,7 @@ paper-card {
   left: 50%;
   top: 50%;
   margin-left: -220px;
-  margin-top: -220px;  
+  margin-top: -220px;
   border: 10px solid #FCB040;
   -webkit-transform: scale(0);
   transform: scale(0);
@@ -550,18 +561,20 @@ paper-card {
   animation: text-anim 0.7s 3.4s 1 ease;
   -webkit-animation: text-anim 0.7s 3.4s 1 ease;
 }
-  
+
+/*      Animate AVATAR    */
+
 @keyframes grow
 {
-0% {  
+0% {
   -webkit-transform: scale(0) translateZ(0);
   transform: scale(0) translateZ(0);
 }
-60% {  
+60% {
   -webkit-transform: scale(1.15) translateZ(0);
   transform: scale(1.15) translateZ(0);
 }
-80% {  
+80% {
   -webkit-transform: scale(0.95) translateZ(0);
   transform: scale(0.95) translateZ(0);
 }
@@ -573,15 +586,15 @@ paper-card {
 
 @-webkit-keyframes grow /* Safari and Chrome */
 {
-0% {  
+0% {
   -webkit-transform: scale(0) translateZ(0);
   transform: scale(0) translateZ(0);
 }
-60% {  
+60% {
   -webkit-transform: scale(1.15) translateZ(0);
   transform: scale(1.15) translateZ(0);
 }
-80% {  
+80% {
   -webkit-transform: scale(0.95) translateZ(0);
   transform: scale(0.95) translateZ(0);
 }
@@ -593,19 +606,19 @@ paper-card {
 
 @keyframes body-enter
 {
-0% { 
+0% {
   -webkit-transform: translateY(200px) translateZ(0);
   transform: translateY(200px) translateZ(0);
 }
-60% {  
+60% {
   -webkit-transform: translateY(-20px) translateZ(0);
   transform: translateY(-20px) translateZ(0);
 }
-80% {  
+80% {
   -webkit-transform: translateY(30px) translateZ(0);
   transform: translateY(30px) translateZ(0);
 }
-100% {  
+100% {
   -webkit-transform: translateY(0px) translateZ(0);
   transform: translateY(0px) translateZ(0);
 }
@@ -613,19 +626,19 @@ paper-card {
 
 @-webkit-keyframes body-enter /* Safari and Chrome */
 {
-0% { 
+0% {
   -webkit-transform: translateY(200px) translateZ(0);
   transform: translateY(200px) translateZ(0);
 }
-60% {  
+60% {
   -webkit-transform: translateY(-20px) translateZ(0);
   transform: translateY(-20px) translateZ(0);
 }
-80% {  
+80% {
   -webkit-transform: translateY(30px) translateZ(0);
   transform: translateY(30px) translateZ(0);
 }
-100% {  
+100% {
   -webkit-transform: translateY(0px) translateZ(0);
   transform: translateY(0px) translateZ(0);
 }
@@ -633,7 +646,7 @@ paper-card {
 
 @keyframes hair-anim
 {
-0% {  
+0% {
   height:0px;
   -webkit-transform: translateY(137px) translateZ(0);
   transform: translateY(137px) translateZ(0);
@@ -647,7 +660,7 @@ paper-card {
 
 @-webkit-keyframes hair-anim /* Safari and Chrome */
 {
-0% {  
+0% {
   height:0px;
   -webkit-transform: translateY(137px) translateZ(0);
   transform: translateY(137px) translateZ(0);
@@ -689,22 +702,22 @@ paper-card {
 
 @keyframes hair-top-anim
 {
-0% { 
+0% {
   opacity: 0;
   -webkit-transform:translate(-64px, 30px) translateZ(0);
   transform:translate(-64px, 30px) translateZ(0);
 }
-60% {  
+60% {
   opacity: 1;
   -webkit-transform: rotate(0deg) translate(-64px, 30px) translateZ(0);
   transform: rotate(0deg) translate(-64px, 30px) translateZ(0);
 }
-80% {  
+80% {
   opacity: 1;
   -webkit-transform: rotate(10deg) translate(-64px, -5px) translateZ(0);
   transform: rotate(10deg) translate(-64px, -5px) translateZ(0);
 }
-100% {  
+100% {
   opacity: 1;
   -webkit-transform: rotate(0deg) translate(-64px, 0px) translateZ(0);
   transform: rotate(0deg) translate(-64px, 0px) translateZ(0);
@@ -713,22 +726,22 @@ paper-card {
 
 @-webkit-keyframes hair-top-anim /* Safari and Chrome */
 {
-0% { 
+0% {
   opacity: 0;
   -webkit-transform:translate(-64px, 30px) translateZ(0);
   transform:translate(-64px, 30px) translateZ(0);
 }
-60% {  
+60% {
   opacity: 1;
   -webkit-transform: rotate(0deg) translate(-64px, 30px) translateZ(0);
   transform: rotate(0deg) translate(-64px, 30px) translateZ(0);
 }
-80% {  
+80% {
   opacity: 1;
   -webkit-transform: rotate(10deg) translate(-64px, -5px) translateZ(0);
   transform: rotate(10deg) translate(-64px, -5px) translateZ(0);
 }
-100% {  
+100% {
   opacity: 1;
   -webkit-transform: rotate(0deg) translate(-64px, 0px) translateZ(0);
   transform: rotate(0deg) translate(-64px, 0px) translateZ(0);
@@ -737,22 +750,22 @@ paper-card {
 
 @keyframes hair-bottom-anim
 {
-0% { 
+0% {
   opacity: 0;
   -webkit-transform:translate(-27px, -40px) translateZ(0);
   transform:translate(-27px, -40px) translateZ(0);
 }
-60% {  
+60% {
   opacity: 1;
   -webkit-transform: rotate(0deg) translate(-27px, -40px) translateZ(0);
   transform: rotate(0deg) translate(-27px, -40px) translateZ(0);
 }
-80% {  
+80% {
   opacity: 1;
   -webkit-transform: rotate(10deg) translate(-27px, 5px) translateZ(0);
   transform: rotate(10deg) translate(-27px, 5px) translateZ(0);
 }
-100% {  
+100% {
   opacity: 1;
   -webkit-transform: rotate(0deg) translate(-27px, 0px) translateZ(0);
   transform: rotate(0deg) translate(-27px, 0px) translateZ(0);
@@ -761,22 +774,22 @@ paper-card {
 
 @-webkit-keyframes hair-bottom-anim /* Safari and Chrome */
 {
-0% { 
+0% {
   opacity: 0;
   -webkit-transform:translate(-27px, -40px) translateZ(0);
   transform:translate(-27px, -40px) translateZ(0);
 }
-60% {  
+60% {
   opacity: 1;
   -webkit-transform: rotate(0deg) translate(-27px, -40px) translateZ(0);
   transform: rotate(0deg) translate(-27px, -40px) translateZ(0);
 }
-80% {  
+80% {
   opacity: 1;
   -webkit-transform: rotate(10deg) translate(-27px, 5px) translateZ(0);
   transform: rotate(10deg) translate(-27px, 5px) translateZ(0);
 }
-100% {  
+100% {
   opacity: 1;
   -webkit-transform: rotate(0deg) translate(-27px, 0px) translateZ(0);
   transform: rotate(0deg) translate(-27px, 0px) translateZ(0);
@@ -785,19 +798,19 @@ paper-card {
 
 @keyframes music-move
 {
-0% { 
+0% {
   -webkit-transform: rotate(0deg) translateZ(0);
   transform: rotate(0deg) translateZ(0);
-} 
-33% {  
+}
+33% {
   -webkit-transform: rotate(-5deg) translateZ(0);
   transform: rotate(-5deg) translateZ(0);
 }
-66% {  
+66% {
   -webkit-transform: rotate(5deg) translateZ(0);
   transform: rotate(5deg) translateZ(0);
 }
-100% {  
+100% {
   -webkit-transform: rotate(0deg) translateZ(0);
   transform: rotate(0deg) translateZ(0);
 }
@@ -805,19 +818,19 @@ paper-card {
 
 @-webkit-keyframes music-move /* Safari and Chrome */
 {
-0% { 
+0% {
   -webkit-transform: rotate(0deg) translateZ(0);
   transform: rotate(0deg) translateZ(0);
 }
-33% {  
+33% {
   -webkit-transform: rotate(-5deg) translateZ(0);
   transform: rotate(-5deg) translateZ(0);
 }
-66% {  
+66% {
   -webkit-transform: rotate(5deg) translateZ(0);
   transform: rotate(5deg) translateZ(0);
 }
-100% {  
+100% {
   -webkit-transform: rotate(0deg) translateZ(0);
   transform: rotate(0deg) translateZ(0);
 }
@@ -834,7 +847,7 @@ paper-card {
   opacity: 1;
   -webkit-transform: translateY(5px) translateZ(0);
   transform: translateY(5px) translateZ(0);
-}  
+}
 100% {
   opacity: 1;
   -webkit-transform: rotate(9deg) translateY(0px) translateZ(0);
@@ -868,7 +881,7 @@ paper-card {
 80% {
   top:-35px;
 
-} 
+}
 100% {
   top:-45px;
 }
@@ -882,7 +895,7 @@ paper-card {
 80% {
   top:-35px;
 
-} 
+}
 100% {
   top:-45px;
 }
@@ -898,7 +911,7 @@ paper-card {
   opacity: 1;
   -webkit-transform: translateY(5px) translateZ(0);
   transform: translateY(5px);
-}  
+}
 100% {
   opacity: 1;
   -webkit-transform:translateY(0px) translateZ(0);
@@ -1064,7 +1077,7 @@ paper-card {
 }
 45% {
   opacity: 1;
-}  
+}
 60% {
   -webkit-transform:rotate(-12deg) translate(30px,-100px) translateZ(0);
   transform:rotate(-12deg) translate(30px,-100px) translateZ(0);
@@ -1089,7 +1102,7 @@ paper-card {
 }
 45% {
   opacity: 1;
-}  
+}
 60% {
   -webkit-transform:rotate(-12deg) translate(30px,-100px) translateZ(0);
   transform:rotate(-12deg) translate(30px,-100px) translateZ(0);
@@ -1187,9 +1200,14 @@ paper-card {
 }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
   .wrapper {
-    padding: 0;
-    width: 400px;
+    display: none;
+  }
+  #cards {
+    margin-top: 100px;
+  }
+  a span {
+    font-size: 10px;
   }
 }

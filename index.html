@@ -10,17 +10,14 @@
     href="bower_components/components-font-awesome/css/font-awesome.min.css">
 
   <script type="text/javascript"
-    src="bower_components/webcomponentsjs/webcomponents-lite.js">
-  </script>
+    src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
   <!--HTML Import-->
   <link rel="import" href="bower_components/paper-styles/paper-styles.html">
-  <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html" >
+  <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html" >
   <link rel="import" href="bower_components/neon-animation/neon-animated-pages.html" >
   <link rel="import" href="bower_components/neon-animation/neon-animations.html">
   <link rel="import" href="bower_components/paper-card/paper-card.html">
-  <link rel="import" href="bower_components/paper-button/paper-button.html">
-  <link rel="import" href="bower_components/paper-input/paper-input.html">
 
   <link rel="import" href="demo/x-element.html">
   <link rel="import" href="demo/x-elements-list.html">
@@ -29,8 +26,14 @@
   <link rel="stylesheet" type="text/css" href="dist/css/reset.css">
   <link rel="stylesheet" type="text/css" href="dist/css/application.css">
   <link rel="stylesheet" type="text/css" href="dist/css/main.min.css">
+  <style>
+    #cards{
+      @apply(--layout-vertical);
+      @apply(--layout-center-center);
+    }
+  </style>
 </head>
-<body class="fullbleed">
+<body class="fullbleed layout vertical">
     <template is="dom-bind">
       <neon-animated-pages id="pages" selected="0">
         <x-elements-list id="list">
@@ -82,16 +85,20 @@
                 </p>
               </div>
               <nav class="header-nav">
-                <a class="header-nav-link header-nav-link--home" data-offset="[data-nav]" data-scroll-to="" href="#about" id="about" on-click="_onHomeClick" title="who i'm.">
-                  <span>Who I'm</span>
+                <a class="header-nav-link header-nav-link--home" data-offset="[data-nav]"
+                  data-scroll-to="" href="#about" id="about" on-click="_onHomeClick" title="who i'm.">
+                  <span>Who I am</span>
                 </a>
-                <a class="header-nav-link header-nav-link--work" data-offset="[data-nav]" data-scroll-to="" href="#work" on-click="_onWorkClick" title="my works">
-                  <span>My Experiences</span>
+                <a class="header-nav-link header-nav-link--work" data-offset="[data-nav]"
+                  data-scroll-to="" href="#work" on-click="_onWorkClick" title="my works">
+                  <span>My Projects</span>
                 </a>
-                <a class="header-nav-link header-nav-link--portifolio" data-offset="[data-nav]" data-scroll-to="" href="#portifolio" on-click="_onPortifolioClick" title="my portifolio">
+                <a class="header-nav-link header-nav-link--portifolio" data-offset="[data-nav]"
+                  data-scroll-to="" href="#portifolio" on-click="_onPortifolioClick" title="my portifolio">
                   <span>My Skills</span>
                 </a>
-                <a class="header-nav-link header-nav-link--contact" data-offset="[data-nav]" data-scroll-to="" href="#contact" on-click="_onContactClick" title="contact to me">
+                <a class="header-nav-link header-nav-link--contact" title="contact to me"
+                  data-offset="[data-nav]" on-click="_onContactClick" data-scroll-to="" href="#contact">
                   <span>Contact to me</span>
                 </a>
               </nav>
@@ -100,17 +107,16 @@
         </x-elements-list>
 
         <x-element>
-          <div class="fit layout vertical center-center">
+          <div class="fit layout horizontal center-center">
             <div class="raised back button" on-click="_onBackClick" title="back">
               Back
             </div>
-            <div id="cards">
+            <div id="cards" class="Grid">
 
               <paper-card heading="Who I'm" class="pink"
-                          image="dist/img/banner2.png">
-
+                image="dist/img/banner2.png">
                 <div class="card-content">
-                  <div class="left">
+                  <div class="Section-paragraph">
                     Bacharel em Sistemas de Informação na Univem, Marília-SP, e atualmente trabalho com desenvolvimento Web, e foco meus estudos na área de Front-end e UX Desing. Sou apaixonado por tecnologia e gosto de ver como as mesmas se interagem e possibilitam a criação de novos cenários, facilitando as vidas de seus usuários.
                   </div>
                 </div>
@@ -121,53 +127,68 @@
         </x-element>
 
         <x-element>
-          <div class="fit layout vertical center-center">
+          <div class="fit layout horizontal center-center">
             <div class="raised back button" on-click="_onBackClick" title="back">
               Back
             </div>
-            <h2>My Experiences</h2>
-            <div class="Panes">
-              <div id="cards" class="Pane Pane--icon Section-pane">
-                <img alt="Badge icon" class="Pane-img" src="dist/svg/engineer.svg">
-                <div class="Pane-text">
-                  <h3 class="Section-subtitle">
-                    Programmer
-                  </h3>
-                  <p class="Section-paragraph">
-                    Google protects the information in your Google Account by checking hundreds of
-                    signals for suspicious activity and letting you control which apps and sites
-                    are able to access your data. You can manage all your privacy and security
-                    settings in one place, <a href="//myaccount.google.com/">My Account</a>.
-                  </p>
+            <div id="cards" class="Glass">
+              <paper-card heading="My Portifolio" image="dist/img/banner2.png">
+                <div class="card-actions">
+                  <a href="#">
+                    <paper-button tabindex="0" raised>
+                      <i class="fa fa-github fa-2"></i> GitHub
+                    </paper-button>
+                  </a>
                 </div>
-              </div>
-              <!--  -->
+              </paper-card>
+
+              <paper-card heading="Codepen projects" image="dist/img/banner2.png">
+                <div class="card-actions">
+                  <a href="#">
+                    <paper-button tabindex="0" raised>
+                      <i class="fa fa-github fa-2"></i> GitHub
+                    </paper-button>
+                  </a>
+                </div>
+              </paper-card>
+
+              <paper-card heading="API Scraper" image="dist/img/banner2.png">
+                <div class="card-actions">
+                  <a href="#">
+                    <paper-button tabindex="0" raised>
+                      <i class="fa fa-github fa-2"></i> GitHub
+                    </paper-button>
+                  </a>
+                </div>
+              </paper-card>
             </div>
           </div>
         </x-element>
 
         <x-element>
-          <div class="fit layout vertical center-center">
+          <div class="fit layout horizontal center-center">
             <div class="raised back button" on-click="_onBackClick" title="back">
               BACK
             </div>
-              <h2>Angular</h2>
-
+            <div class="Grid">
+              <h2 class="Section-title">Angular</h2>
             </div>
           </div>
         </x-element>
 
         <x-element>
-          <div class="fit layout vertical center-center">
+          <div class="fit layout horizontal center-center">
+
             <div class="raised back button" on-click="_onBackClick" title="back">
               BACK
             </div>
-            <div class="vertical center-justified layout">
-              <h2>Contact me</h2>
-              
+            <div class="Grid">
+              <h2 class="Section-title">Contact me</h2>
             </div>
+
           </div>
         </x-element>
+
       </neon-animated-pages>
     </template>
   </div>
@@ -176,7 +197,6 @@
     var scope = document.querySelector('template[is="dom-bind"]');
 
     scope._onHomeClick = function(event) {
-      console.log(event.target);
       this.$.list.sharedElements = {
         'ripple': event.target,
         'reverse-ripple': event.target
