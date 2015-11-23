@@ -10,7 +10,7 @@ neon-animated-pages #list div>header{
 .large{
   width: 100%;
 }
-.social-section{
+/*.social-section{
   width: 80%;
   max-width: 350px;
   height: 40px;
@@ -20,14 +20,9 @@ neon-animated-pages #list div>header{
   margin: 0 auto;
   margin-top: 3em;
   margin-bottom: 3em;
-}
-#cards{
-  @apply(--layout-vertical);
-  @apply(--layout-center-center);
-  margin-top: 100px;
-
-}
+}*/
 paper-card {
+  margin: 10px;
   display: inline-block;
   max-width: 400px;
   position: relative;
@@ -1203,9 +1198,6 @@ paper-card {
 @media (max-width: 850px) {
   .wrapper {
     display: none;
-  }
-  #cards {
-    margin-top: 100px;
   }
   a span {
     font-size: 10px;

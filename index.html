@@ -26,10 +26,12 @@
   <link rel="stylesheet" type="text/css" href="dist/css/reset.css">
   <link rel="stylesheet" type="text/css" href="dist/css/application.css">
   <link rel="stylesheet" type="text/css" href="dist/css/main.min.css">
-  <style>
+  <style is="custom-style">
     #cards{
-      @apply(--layout-vertical);
-      @apply(--layout-center-center);
+      @apply(--layout-horizontal);
+      @apply(--layout-wrap);
+      @apply(--layout-center-justified);
+      margin-top: 100px;
     }
   </style>
 </head>
@@ -108,91 +110,130 @@
 
         <x-element>
           <div class="fit layout horizontal center-center">
-            <div class="raised back button" on-click="_onBackClick" title="back">
-              Back
-            </div>
-            <div id="cards" class="Grid">
+            <div class="Grid">
+              <div class="raised back button" on-click="_onBackClick" title="back">
+                Back
+              </div>
+              <div id="cards">
 
-              <paper-card heading="Who I'm" class="pink"
-                image="dist/img/banner2.png">
-                <div class="card-content">
-                  <div class="Section-paragraph">
-                    Bacharel em Sistemas de Informação na Univem, Marília-SP, e atualmente trabalho com desenvolvimento Web, e foco meus estudos na área de Front-end e UX Desing. Sou apaixonado por tecnologia e gosto de ver como as mesmas se interagem e possibilitam a criação de novos cenários, facilitando as vidas de seus usuários.
+                <paper-card heading="Who I'm" class="pink"
+                  image="dist/img/banner2.png">
+                  <div class="card-content">
+                    <div class="Section-paragraph">
+                      Bacharel em Sistemas de Informação na Univem, Marília-SP, e atualmente trabalho com desenvolvimento Web, e foco meus estudos na área de Front-end e UX Desing. Sou apaixonado por tecnologia e gosto de ver como as mesmas se interagem e possibilitam a criação de novos cenários, facilitando as vidas de seus usuários.
+                    </div>
+                  </div>
+                </paper-card>
+
+              </div>
+            </div>
+          </div>
+        </x-element>
+
+        <x-element>
+          <div class="fit layout horizontal center-center">
+            <div class="Grid">
+              <div class="raised back button" on-click="_onBackClick" title="back">
+                Back
+              </div>
+              <div id="cards">
+                <paper-card heading="My Portifolio" image="dist/img/1.jpg">
+                  <div class="card-actions">
+                    <a href="https://github.com/luanpontolio/portifolio" target="_blank">
+                      <paper-button tabindex="0" raised>
+                        <i class="fa fa-github fa-2"></i> GitHub
+                      </paper-button>
+                    </a>
+                  </div>
+                </paper-card>
+
+                <paper-card heading="Codepen projects" image="dist/img/2.jpg">
+                  <div class="card-actions">
+                    <a href="http://codepen.io" target="_blank">
+                      <paper-button tabindex="0" raised>
+                        <i class="fa fa-github fa-2"></i> GitHub
+                      </paper-button>
+                    </a>
+                  </div>
+                </paper-card>
+
+                <paper-card heading="Mini Course" image="dist/img/4.jpg">
+                  <div class="card-actions">
+                    <a href="https://github.com/luanpontolio/semanati" target="_blank">
+                      <paper-button tabindex="0" raised>
+                        <i class="fa fa-github fa-2"></i> GitHub
+                      </paper-button>
+                    </a>
+                  </div>
+                </paper-card>
+              </div>
+            </div>
+          </div>
+        </x-element>
+
+        <x-element>
+          <div class="fit layout horizontal center-center">
+            <div class="Grid">
+              <div class="raised back button" on-click="_onBackClick" title="back">
+                BACK
+              </div>
+              <div id="cards">
+                <div class="AndroidTrust">
+                  <div class="AndroidTrust-wrap">
+                    <div class="AndroidTrust-circle"></div>
+                    <div class="AndroidTrust-phone"></div>
+                    <div class="AndroidTrust-lock"></div>
+                    <div class="AndroidTrust-icons" data-trust-group="">
+                      <div class="AndroidTrust-action AndroidTrust-action--bluetooth" data-trust="Nearby devices">
+                        <i class="AndroidTrust-icon AndroidTrust-icon--bluetooth">Nearby devices</i>
+                        <i class="AndroidTrust-icon AndroidTrust-icon--off AndroidTrust-icon--bluetooth">Nearby
+                        devices</i>
+                      </div>
+                      <div class="AndroidTrust-action AndroidTrust-action--wear" data-trust="Wearables">
+                        <i class="AndroidTrust-icon AndroidTrust-icon--wear">Wearables</i> <i class="AndroidTrust-icon AndroidTrust-icon--off AndroidTrust-icon--wear">Wearables</i>
+                      </div>
+                      <div class="AndroidTrust-action AndroidTrust-action--map" data-trust="Safe locations">
+                        <i class="AndroidTrust-icon AndroidTrust-icon--map">Safe locations</i>
+                        <i class="AndroidTrust-icon AndroidTrust-icon--off AndroidTrust-icon--map">Safe
+                        locations</i>
+                      </div>
+                      <div class="AndroidTrust-action AndroidTrust-action--voice" data-trust="Your voice">
+                        <i class="AndroidTrust-icon AndroidTrust-icon--voice">Your voice</i> <i class="AndroidTrust-icon AndroidTrust-icon--off AndroidTrust-icon--voice">Your
+                        voice</i>
+                      </div>
+                    </div>
+                    <div class="AndroidTrust-display">
+                      <p class="AndroidTrust-tag">
+                        Skills:
+                      </p>
+                      <div class="AndroidTrust-roll">
+                        <p class="AndroidTrust-tech is-animating" data-trust-display="">\Akakak</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-              </paper-card>
+              </div>
             </div>
           </div>
         </x-element>
 
         <x-element>
           <div class="fit layout horizontal center-center">
-            <div class="raised back button" on-click="_onBackClick" title="back">
-              Back
-            </div>
-            <div id="cards" class="Glass">
-              <paper-card heading="My Portifolio" image="dist/img/banner2.png">
-                <div class="card-actions">
-                  <a href="#">
-                    <paper-button tabindex="0" raised>
-                      <i class="fa fa-github fa-2"></i> GitHub
-                    </paper-button>
-                  </a>
-                </div>
-              </paper-card>
-
-              <paper-card heading="Codepen projects" image="dist/img/banner2.png">
-                <div class="card-actions">
-                  <a href="#">
-                    <paper-button tabindex="0" raised>
-                      <i class="fa fa-github fa-2"></i> GitHub
-                    </paper-button>
-                  </a>
-                </div>
-              </paper-card>
-
-              <paper-card heading="API Scraper" image="dist/img/banner2.png">
-                <div class="card-actions">
-                  <a href="#">
-                    <paper-button tabindex="0" raised>
-                      <i class="fa fa-github fa-2"></i> GitHub
-                    </paper-button>
-                  </a>
-                </div>
-              </paper-card>
-            </div>
-          </div>
-        </x-element>
-
-        <x-element>
-          <div class="fit layout horizontal center-center">
-            <div class="raised back button" on-click="_onBackClick" title="back">
-              BACK
-            </div>
             <div class="Grid">
-              <h2 class="Section-title">Angular</h2>
+              <div class="raised back button" on-click="_onBackClick" title="back">
+                BACK
+              </div>
+              <div id="cards">
+                <h2 class="Section-title">Contact to me</h2>
+              </div>
             </div>
-          </div>
-        </x-element>
-
-        <x-element>
-          <div class="fit layout horizontal center-center">
-
-            <div class="raised back button" on-click="_onBackClick" title="back">
-              BACK
-            </div>
-            <div class="Grid">
-              <h2 class="Section-title">Contact me</h2>
-            </div>
-
           </div>
         </x-element>
 
       </neon-animated-pages>
     </template>
   </div>
-
+  <script type="text/javascript" src="dist/js/app.min.js"></script>
   <script>
     var scope = document.querySelector('template[is="dom-bind"]');
 
@@ -227,7 +268,6 @@
     scope._onBackClick = function(event) {
       this.$.pages.selected = 0;
     };
-
   </script>
 </body>
 </html>
