@@ -1,5 +1,4 @@
 <link rel="import" href="../bower_components/polymer/polymer.html" >
-<link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/neon-animation/neon-shared-element-animatable-behavior.html">
 
 <dom-module id="x-elements-list">
@@ -21,41 +20,40 @@
     </div>
 
   </template>
+  <script>
+    (function() {
+      Polymer({
+        is: 'x-elements-list',
+        behaviors: [
+          Polymer.NeonSharedElementAnimatableBehavior
+        ],
+
+        properties: {
+          animationConfig: {
+            value: function() {
+              return {
+                'entry': [{
+                  name: 'reverse-ripple-animation',
+                  id: 'reverse-ripple',
+                  toPage: this
+                }],
+                'exit': [{
+                  name: 'fade-out-animation',
+                  node: this.$.content,
+                  timing: {
+                    delay: 50,
+                    duration: 2
+                  }
+                }, {
+                  name: 'ripple-animation',
+                  id: 'ripple',
+                  fromPage: this
+                }]
+              };
+            }
+          }
+        }
+      });
+    })();
+  </script>
 </dom-module>
-<script>
-	(function() {
-	  Polymer({
-	    is: 'x-elements-list',
-	    behaviors: [
-	      Polymer.NeonSharedElementAnimatableBehavior
-	    ],
-
-	    properties: {
-	      animationConfig: {
-	        value: function() {
-	          return {
-	            'entry': [{
-	              name: 'reverse-ripple-animation',
-	              id: 'reverse-ripple',
-	              toPage: this
-	            }],
-	            'exit': [{
-	              name: 'fade-out-animation',
-	              node: this.$.content,
-	              timing: {
-	                delay: 50,
-	                duration: 2
-	              }
-	            }, {
-	              name: 'ripple-animation',
-	              id: 'ripple',
-	              fromPage: this
-	            }]
-	          };
-	        }
-	      }
-	    }
-	  });
-	})();
-</script>
-
