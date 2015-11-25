@@ -1,5 +1,5 @@
 <!doctype>
-<html>
+<html lang="en">
 <head>
   <title>Luan - Portifolio</title>
   <meta charset="utf-8">
@@ -12,7 +12,6 @@
   <script type="text/javascript"
     src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-
   <!--HTML Import-->
   <link rel="import" href="bower_components/paper-styles/paper-styles.html">
   <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html" >
@@ -24,7 +23,6 @@
   <link rel="import" href="demo/x-elements-list.html">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" type="text/css" href="dist/css/reset.css">
   <link rel="stylesheet" type="text/css" href="dist/css/application.css">
   <link rel="stylesheet" type="text/css" href="dist/css/main.min.css">
   <style is="custom-style">
@@ -32,7 +30,12 @@
       @apply(--layout-horizontal);
       @apply(--layout-wrap);
       @apply(--layout-center-justified);
-      margin-top: 100px;
+      margin-top: 60px;
+    }
+    .social-icons{
+      @apply(--layout-horizontal);
+      @apply(--layout-wrap);
+      @apply(--layout-center-justified);
     }
   </style>
 </head>
@@ -179,39 +182,6 @@
                 BACK
               </div>
               <div id="cards">
-                <div class="AndroidTrust">
-            <div class="AndroidTrust-wrap">
-              <div class="AndroidTrust-circle"></div>
-              <div class="AndroidTrust-phone"></div>
-              <div class="AndroidTrust-lock"></div>
-              <div data-trust-group="" class="AndroidTrust-icons">
-                <div data-trust="Nearby devices" class="AndroidTrust-action AndroidTrust-action--bluetooth">
-                  <i class="AndroidTrust-icon AndroidTrust-icon--bluetooth">Nearby devices</i>
-                  <i class="AndroidTrust-icon AndroidTrust-icon--off AndroidTrust-icon--bluetooth">Nearby
-                  devices</i>
-                </div>
-                <div data-trust="Wearables" class="AndroidTrust-action AndroidTrust-action--wear">
-                  <i class="AndroidTrust-icon AndroidTrust-icon--wear">Wearables</i> <i class="AndroidTrust-icon AndroidTrust-icon--off AndroidTrust-icon--wear">Wearables</i>
-                </div>
-                <div data-trust="Safe locations" class="AndroidTrust-action AndroidTrust-action--map">
-                  <i class="AndroidTrust-icon AndroidTrust-icon--map">Safe locations</i> <i class="AndroidTrust-icon AndroidTrust-icon--off AndroidTrust-icon--map">Safe
-                  locations</i>
-                </div>
-                <div data-trust="Your voice" class="AndroidTrust-action AndroidTrust-action--voice is-active">
-                  <i class="AndroidTrust-icon AndroidTrust-icon--voice">Your voice</i> <i class="AndroidTrust-icon AndroidTrust-icon--off AndroidTrust-icon--voice">Your
-                  voice</i>
-                </div>
-              </div>
-              <div class="AndroidTrust-display">
-                <p class="AndroidTrust-tag">
-                  Android can trust:
-                </p>
-                <div class="AndroidTrust-roll">
-                  <p data-trust-display="" class="AndroidTrust-tech is-animating">Your voice</p>
-                </div>
-              </div>
-            </div>
-          </div>
               </div>
             </div>
           </div>
@@ -224,7 +194,31 @@
                 BACK
               </div>
               <div id="cards">
-                <>
+                <paper-card>
+                  <div class="card-content social-icons">
+
+                    <a class="btn facebook" title="facebook" target="_blank" href="https://www.facebook.com/luan.pontolio">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class=" btn linkedin" title="linkedin" target="_blank" href="https://br.linkedin.com/in/luanpontolio">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a class=" btn google" title="google plus" target="_blank" href="https://google.com/+LuanPontolio/about">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class=" btn github" title="github" target="_blank" href="https://github.com/luanpontolio">
+                      <i class="fa fa-github"></i>
+                    </a>
+
+
+                  </div>
+                  <div class="card-actions">
+                    <span class="Grid-cell">
+                      <b>Send me an e-mail:</b>
+                      <a href="#">luan.pontolio@gmail.com</a>
+                    </span>
+                  </div>
+                </paper-card>
               </div>
             </div>
           </div>
@@ -233,7 +227,6 @@
       </neon-animated-pages>
     </template>
   </div>
-  <script type="text/javascript" src="dist/js/app.min.js"></script>
   <script>
     var scope = document.querySelector('template[is="dom-bind"]');
 
