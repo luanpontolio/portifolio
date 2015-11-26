@@ -4,7 +4,8 @@
   <title>Luan - Portifolio</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <meta name="viewport"
+    content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
   <link rel="stylesheet"
     href="bower_components/components-font-awesome/css/font-awesome.min.css">
@@ -37,37 +38,12 @@
       @apply(--layout-wrap);
       @apply(--layout-center-justified);
     }
-    paper-header-panel{
-      width: 600px;
-      height: 400px;
-      overflow: auto;
-      background-color: #fff;
-      -webkit-overflow-scrolling: touch;
-      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
-        0 1px 5px 0 rgba(0,0,0,0.12),
-        0 3px 1px -2px rgba(0,0,0,0.2);
+    section{
+      margin-top: 10px;
     }
-    paper-toolbar{
-      background: #7986cb !important;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-    }
-    #tabs{
-      height: 48px;
-      overflow: hidden;
-      font-weight: 500;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      text-transform: uppercase;
-    }
-    @media (max-width: 600px){
-      #tabs{
-        width: 200px;
-      }
-      .container{
-        width: 400px;
+    @media (max-width: 481px){
+      section{
+        margin: 10px;
       }
     }
   </style>
@@ -153,14 +129,16 @@
               </div>
               <div id="cards">
 
-                <paper-card heading="Who I'm" class="pink"
+                <paper-card heading="Who I am?" class="card-whoiam"
                   image="dist/img/banner2.png">
                   <div class="card-content">
-                    <div class="Section-paragraph">
-                      Bacharel em Sistemas de Informação na Univem, Marília-SP, e atualmente trabalho com desenvolvimento Web, e foco meus estudos na área de Front-end e UX Desing. Sou apaixonado por tecnologia e gosto de ver como as mesmas se interagem e possibilitam a criação de novos cenários, facilitando as vidas de seus usuários.
-                    </div>
+                    <p class="Section-paragraph">
+                      I graduated at UNIVEM in the course of Information Systems, in 2014 in Marília-SP, Brazil, and currently I work as Web Developer. But I always try to improve my knowledge in the area, I like to participate of several projects either Open Source or Private, challenging myself on news scenarios without restrictions of languages or tools...this is what moves me!
+                    </p>
+                    <p class="Section-paragraph">
+                      So, I am in love with technology and I like to see how they interact and enable the creation of new scenarios providing a better life for their users.
+                    </p>
                   </div>
-                </paper-card>
 
               </div>
             </div>
@@ -215,7 +193,7 @@
                 BACK
               </div>
               <div id="cards">
-                <section class="">
+                <section>
                   <div class="Grid-row">
                   <div class="Grid-cell Grid-cell--full">
                     <div class="Panes">
@@ -224,7 +202,7 @@
                         <div class="Pane-text">
                           <h3 class="Section-subtitle">Web</h3>
                           <p class="Section-paragraph">
-                            HTML5, CSS3, Polymer, REST APIs, Materializecss, Bootstrap, MVC Frameworks.
+                            HTML5, CSS3, Polymer, Materializecss, Bootstrap.
                           </p>
                         </div>
                       </div>
@@ -241,15 +219,14 @@
                   </div>
                   </div>
                 </section>
-                <section>
+                <section >
                   <div class="Grid-row">
                     <div class="Grid-cell Grid-cell--full">
                       <div class="Panes">
                         <div class="Pane Pane--icon Section-pane">
                           <img src="dist/img/banner2.png" class="Pane-img">
-
                           <div class="Pane-text">
-                            <h3 class="Section-subtitle">Plataform</h3>
+                            <h3 class="Section-subtitle">Plataforms</h3>
                             <p class="Section-paragraph">
                               Ubuntu, Red Hat, Debian, Fedora.
                             </p>
