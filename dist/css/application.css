@@ -45,6 +45,11 @@ paper-card {
   text-align: justify;
   letter-spacing: 1px;
 }
+i {
+  font-size: 3em;
+  font-weight: 400;
+  font-variant: inherit;
+}
 .fancy .title {
   position: absolute;
   top: 30px;
