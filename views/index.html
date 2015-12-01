@@ -1,0 +1,264 @@
+<template is="dom-bind">
+  <neon-animated-pages id="pages" selected="0">
+    <x-elements-list id="list">
+      <div>
+        <header class="header" data-header>
+          <div class="header-video Video" data-video>
+            <div class="wrapper">
+              <div class="background-circle">
+                <div class="triangle-light"></div>
+                <div class="body"></div>
+                <div class="triangle-dark"></div>
+              </div>
+              <div class="head">
+                <div class="ear" id="left"></div>
+                <div class="ear" id="right"></div>
+                <div class="hair-main">
+                  <div class="sideburn" id="left"></div>
+                  <div class="sideburn" id="right"></div>
+                  <div class="hair-top"></div>
+                </div>
+                <div class="face">
+                  <div class="nose"></div>
+                  <div class="eye-shadow" id="left">
+                    <div class="eyebrow"></div>
+                    <div class="eye"></div>
+                  </div>
+                  <div class="eye-shadow" id="right">
+                    <div class="eyebrow"></div>
+                    <div class="eye"></div>
+                  </div>
+                  <div class="mouth"></div>
+                  <div class="shadow-wrapper">
+                    <div class="shadow"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-intro">
+            <p class="header-tag">
+              Welcome to my site
+            </p>
+            <h2 class="header-title">
+              I'm Luan,
+            </h2>
+            <p class="header-desc">
+              A Web Developer <i class="fa fa-heart"></i>,
+               and here you discover about me.
+            </p>
+          </div>
+          <nav class="header-nav">
+            <a class="header-nav-link header-nav-link--home" data-offset="[data-nav]"
+              data-scroll-to="" href="#about" id="about" on-click="_onHomeClick" title="who i'm.">
+              <span>Who I am</span>
+            </a>
+            <a class="header-nav-link header-nav-link--work" data-offset="[data-nav]"
+              data-scroll-to="" href="#work" on-click="_onWorkClick" title="my projects">
+              <span>My Projects</span>
+            </a>
+            <a class="header-nav-link header-nav-link--portifolio" data-offset="[data-nav]"
+              data-scroll-to="" href="#portifolio" on-click="_onPortifolioClick" title="my experience">
+              <span>My Experience</span>
+            </a>
+            <a class="header-nav-link header-nav-link--contact" title="contact to me"
+              data-offset="[data-nav]" on-click="_onContactClick" data-scroll-to="" href="#contact">
+              <span>Contact to me</span>
+            </a>
+          </nav>
+        </header>
+      </div>
+    </x-elements-list>
+
+    <x-element>
+      <div class="fit layout horizontal center-center">
+        <div class="Grid">
+          <div class="raised back button" on-click="_onBackClick" title="back">
+            Back
+          </div>
+          <div id="cards">
+
+            <paper-card heading="Who I am?" class="card-whoiam"
+              image="/images/banner2.png">
+              <div class="card-content">
+                <p class="Section-paragraph">
+                  I acquired a bachelor's degree in Information Systems from UNIVEM in Marília (São Paulo State, Brazil) in 2014 and currently work as a Web Developer. I always look to broaden my knowledge in the area and enjoy participating in new projects both Open Source and private. A new challenge in software or web development that comes with no restrictions in regard to a programming tool or a language?...count me in!
+                </p>
+                <p class="Section-paragraph">
+                  So, I am in love with technologies and like to see how they interact with each other and enable (the/a) creation of new scenarios to provide a better life for their users.
+                </p>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </x-element>
+
+    <x-element>
+      <div class="fit layout horizontal center-center">
+        <div class="Grid">
+          <div class="raised back button" on-click="_onBackClick" title="back">
+            Back
+          </div>
+          <div id="cards">
+            <paper-card heading="My Portifolio" image="/images/mb-bg-fb-01.jpg">
+              <div class="card-actions">
+                <a href="https://github.com/luanpontolio/portifolio" target="_blank">
+                  <paper-button tabindex="0" raised>
+                    <i class="fa fa-github fa-2"></i> GitHub
+                  </paper-button>
+                </a>
+              </div>
+            </paper-card>
+
+            <paper-card heading="API Scraping" image="/images/mb-bg-fb-02.jpg">
+              <div class="card-actions">
+                <a href="https://github.com/luanpontolio/scraper-api" target="_blank">
+                  <paper-button tabindex="0" raised>
+                    <i class="fa fa-github fa-2"></i> GitHub
+                  </paper-button>
+                </a>
+              </div>
+            </paper-card>
+
+            <paper-card heading="Mini Course" image="/images/mb-bg-fb-03.jpg">
+              <div class="card-actions">
+                <a href="https://github.com/luanpontolio/semanati" target="_blank">
+                  <paper-button tabindex="0" raised>
+                    <i class="fa fa-github fa-2"></i> GitHub
+                  </paper-button>
+                </a>
+              </div>
+            </paper-card>
+
+          </div>
+        </div>
+      </div>
+    </x-element>
+
+    <x-element>
+      <div class="fit layout horizontal center-center">
+        <div class="Grid">
+          <div class="raised back button" on-click="_onBackClick" title="back">
+            BACK
+          </div>
+          <div id="cards">
+            <section id="panel-timeline">
+              <div class="panel-timeline-block">
+                <div class="panel-timeline-img developed">
+                  <i class="fa fa-briefcase fa-3"></i>
+                </div> <!-- panel-timeline-img -->
+
+                <div class="Pane Section-Pane panel-timeline-content">
+                  <h2>Web Developer</h2>
+                  <span>Boa Vista SCPC - <a href="http://www.boavistaservicos.com.br/" target="_blank">here</a></span>
+                  <p>To develop solutions related to data extraction, on processes corresponding to recover the information present in the Web.</p>
+                  <span class="panel-date">Jan 2015 - Now</span>
+                </div> <!-- panel-timeline-content -->
+              </div> <!-- panel-timeline-block -->
+
+              <div class="panel-timeline-block">
+                <!-- ... -->
+                <div class="panel-timeline-img programming">
+                  <i class="fa fa-briefcase fa-3"></i>
+                </div> <!-- panel-timeline-img -->
+
+                <div class="Pane Section-Pane panel-timeline-content">
+                  <h2>Programming Intern</h2>
+                  <span>Boa Vista SCPC - <a href="http://www.boavistaservicos.com.br/" target="_blank">here</a></span>
+                  <p>Actution on development cicle (requirements, analisys, design, implementation, testing and evolution) focusing on solutions to the Web environment with related tecnologies.</p>
+                  <span class="panel-date">Dez 2012 - Dez 2014</span>
+                </div> <!-- panel-timeline-content -->
+              </div>
+
+              <div class="panel-timeline-block">
+                <div class="panel-timeline-img intern-programming">
+                  <i class="fa fa-briefcase fa-3"></i>
+                </div> <!-- panel-timeline-img -->
+
+                <div class="Pane Section-Pane panel-timeline-content">
+                  <h2>Developer Intern</h2>
+                  <span>Polite(Polímeros e Tecnologia) - <a href="http://www.polite.com.br/" target="_blank">here</a></span>
+                  <p>Actuation developing an e-commerce plataform.</p>
+                  <span class="panel-date">Fev 2012 - Nov 2012</span>
+                </div> <!-- panel-timeline-content -->
+              </div> <!-- panel-timeline-block -->
+            </section>
+          </div>
+        </div>
+      </div>
+    </x-element>
+
+    <x-element>
+      <div class="fit layout horizontal center-center">
+        <div class="Grid">
+          <div class="raised back button" on-click="_onBackClick" title="back">
+            BACK
+          </div>
+          <div id="cards">
+            <paper-card>
+              <div class="card-content social-icons">
+
+                <a class="btn facebook" title="facebook" target="_blank" href="https://www.facebook.com/luan.pontolio">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a class=" btn linkedin" title="linkedin" target="_blank" href="https://br.linkedin.com/in/luanpontolio">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a class=" btn google" title="google plus" target="_blank" href="https://google.com/+LuanPontolio/about">
+                  <i class="fa fa-google-plus"></i>
+                </a>
+                <a class=" btn github" title="github" target="_blank" href="https://github.com/luanpontolio">
+                  <i class="fa fa-github"></i>
+                </a>
+
+              </div>
+              <div class="card-actions">
+                <span class="Grid-cell">
+                  <b>Send me an e-mail:</b>
+                  <a href="#">luan.pontolio@gmail.com</a>
+                </span>
+              </div>
+            </paper-card>
+          </div>
+        </div>
+      </div>
+    </x-element>
+
+  </neon-animated-pages>
+</template>
+<script>
+  var scope = document.querySelector('template[is="dom-bind"]');
+
+  scope._onHomeClick = function(event) {
+    this.$.list.sharedElements = {
+      'ripple': event.target,
+      'reverse-ripple': event.target
+    };
+    this.$.pages.selected = 1;
+  };
+  scope._onWorkClick = function(event) {
+    this.$.list.sharedElements = {
+      'ripple': event.target,
+      'reverse-ripple': event.target
+    };
+    this.$.pages.selected = 2;
+  };
+  scope._onPortifolioClick = function(event) {
+    this.$.list.sharedElements = {
+      'ripple': event.target,
+      'reverse-ripple': event.target
+    };
+    this.$.pages.selected = 3;
+  };
+  scope._onContactClick = function(event) {
+    this.$.list.sharedElements = {
+      'ripple': event.target,
+      'reverse-ripple': event.target
+    };
+    this.$.pages.selected = 4;
+  };
+  scope._onBackClick = function(event) {
+    this.$.pages.selected = 0;
+  };
+</script>
