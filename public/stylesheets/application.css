@@ -39,9 +39,9 @@ paper-card {
 }
 .card-content {
   padding: 24px 80px;
-  border-top: 1px solid #ddd;
+  /* border-top: 1px solid #ddd; */
   /* font-size: 18px; */
-  line-height: 20px;
+  /* line-height: 20px; */
   text-align: justify;
   letter-spacing: 1px;
 }
